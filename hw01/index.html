@@ -184,13 +184,13 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      Simple Baseline (隨機產生120人CSV成績表)程式碼，請放在 https://github.com/<span style="color:red;">GlennWang</span>/vis2023f/hw<span style="color:red;">01</span>/src-easy/<br>
+      Simple Baseline (隨機產生120人CSV成績表)程式碼，請放在 https://github.com/<span style="color:red;">GlennWang</span>/vis2023f/tree/main/hw<span style="color:red;">01</span>/src-easy/<br>
       <hr>
-      Simple Baseline (繪製 v3 蘋果成績表)程式碼，請放在 https://github.com/<span style="color:red;">GlennWang</span>/vis2023f/hw<span style="color:red;">01</span>/src-medium-v3/<br>
+      Simple Baseline (繪製 v3 蘋果成績表)程式碼，請放在 https://github.com/<span style="color:red;">GlennWang</span>/vis2023f/tree/main/hw<span style="color:red;">01</span>/src-medium-v3/<br>
       <hr>
-      Medium Baseline (繪製 v7 蘋果成績表)程式碼，請放在 https://github.com/<span style="color:red;">GlennWang</span>/vis2023f/hw<span style="color:red;">01</span>/src-medium-v7/<br>
+      Medium Baseline (繪製 v7 蘋果成績表)程式碼，請放在 https://github.com/<span style="color:red;">GlennWang</span>/vis2023f/tree/main/hw<span style="color:red;">01</span>/src-medium-v7/<br>
       <hr>
-      Strong Baseline (參考<a href="https://observablehq.com/@d3/gallery?utm_source=d3js-org&utm_medium=nav&utm_campaign=try-observable">D3畫廊</a>，繪製嶄新的成績表)程式碼，請放在 https://github.com/<span style="color:red;">GlennWang</span>/vis2023f/hw<span style="color:red;">01</span>/src-strong/<br>
+      Strong Baseline (參考<a href="https://observablehq.com/@d3/gallery?utm_source=d3js-org&utm_medium=nav&utm_campaign=try-observable">D3畫廊</a>，繪製嶄新的成績表)程式碼，請放在 https://github.com/<span style="color:red;">GlennWang</span>/vis2023f/tree/main/hw<span style="color:red;">01</span>/src-strong/<br>
     </div>
   </div>
 
@@ -214,13 +214,13 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <a href="https://github.com/GlennWang/vis2023f/hw01/src-easy/">https://github.com/GlennWang/vis2023f/hw01/src-easy/</a>
+      <a href="https://glennwang.github.io/vis2023f/hw01/src-easy/">https://glennwang.github.io/vis2023f/hw01/src-easy/</a>
       <hr>
-      <a href="https://github.com/GlennWang/vis2023f/hw01/src-medium-v3/">https://github.com/GlennWang/vis2023f/hw01/src-medium-v3/</a>
+      <a href="https://glennwang.github.io/vis2023f/hw01/src-medium-v3/">https://glennwang.github.io/vis2023f/hw01/src-medium-v3/</a>
       <hr>
-      <a href="https://github.com/GlennWang/vis2023f/hw01/src-medium-v7/">https://github.com/GlennWang/vis2023f/hw01/src-medium-v7/</a>
+      <a href="https://glennwang.github.io/vis2023f/hw01/src-medium-v7/">https://glennwang.github.io/vis2023f/hw01/src-medium-v7/</a>
       <hr>
-      <a href="https://github.com/GlennWang/vis2023f/hw01/src-strong/">https://github.com/GlennWang/vis2023f/hw01/src-strong/</a>
+      <a href="https://glennwang.github.io/vis2023f/hw01/src-strong/">https://glennwang.github.io/vis2023f/hw01/src-strong/</a>
     </div>
   </div>
 
@@ -234,10 +234,10 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      這次作業，我學到了如何使用 D3.js 讀入 CSV 格式成績表，進而繪製蘋果成績表。在這次的作業，d3.data() 可以綁定成績到 HTML <td> 元素的 _groups[0][0].__data__ 屬性，可以打開 console 進行驗證。而 enter() 之後的函式， data 數量有多少，就會執行幾次。有點像 for 迴圈。
-      <hr>
-
-      心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。
+      這次作業的simple baseline非常簡單，而且還有範例程式，剩下的就只有一些細部的規則，比如隨機英數要注意，然後medium基本也是照著範例程式。
+      v3跟v7的差別在於變成.then跟parsedCSV = d3.csvParseRows(data);的部分有點不一樣。
+      然後Strong的部分完全不知道怎麼套，所以直接參考了好朋友的109590004，這關鍵就在於不會套，套好的基本上就看得懂，所以看了一下能不能把固定的顏色改成別的顏色。
+      最後用了d3的插值函數之類的方法改了顏色。接著就嘗試能不能隨機，結果是能，但很醜，就註解掉了。
     </div>
   </div>
 
@@ -258,7 +258,7 @@
           <td>Simple baseline - 產生 Dummy CSV 虛構成績表</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
           <td id='m2'>2</td>
           <td>Simple baseline - 繪製 v3 蘋果成績表</td>
         </tr>
@@ -268,7 +268,7 @@
           <td>Medium baseline - 繪製 v7 蘋果成績表</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
           <td id='m4'>4</td>
           <td>Strong baseline - 繪製 v7 創新成績表，參考<a href="https://observablehq.com/@d3/gallery?utm_source=d3js-org&utm_medium=nav&utm_campaign=try-observable">D3畫廊</a>，修改範例，推出創新成績表</td>
         </tr>
@@ -377,6 +377,10 @@
 
     if (d3.select("#myCheckbox3").property("checked")){
       score += parseInt(d3.select('#m3').html());   
+    }
+
+    if (d3.select("#myCheckbox4").property("checked")){
+      score += parseInt(d3.select('#m4').html());   
     }
 
     d3.select("#myTotal").html(score);    

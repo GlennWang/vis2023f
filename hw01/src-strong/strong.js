@@ -23,7 +23,7 @@ d3.text("../data/csv/data.csv").then(function (data) {
   
     series = d3.stack().keys(parsedCsv.columns.slice(5))(parsedCsv).map(d => (d.forEach(v => v.key = d.key), d));
   
-    // 使用隨機插值函數來產生顏色
+    // 使用插值函數來產生顏色
     const colorScale = d3.scaleSequential(d3.interpolateRainbow)
       .domain([0, parsedCsv.columns.slice(5).length]);
   
@@ -74,7 +74,7 @@ function createHintSvg(colorScale) {
     .selectAll("rect")
     .data(scoreHeader)
     .join("rect")
-    .attr("fill", (d, i) => colorScale(i))  // 使用隨機插值函數產生顏色
+    .attr("fill", (d, i) => colorScale(i))  // 使用插值函數產生顏色
     .attr("x", (d, i) => i * rectWidth + margin.left)
     .attr("y", 0)
     .attr("width", rectWidth)
@@ -136,7 +136,7 @@ function createScoreSvg(colorScale) {
     .selectAll("g")
     .data(series)
     .join("g")
-    .attr("fill", d => colorScale(parsedCsv.columns.slice(5).indexOf(d.key)))  // 使用隨機插值函數產生顏色
+    .attr("fill", d => colorScale(parsedCsv.columns.slice(5).indexOf(d.key)))  // 使用插值函數產生顏色
     .selectAll("rect")
     .data(d => d)
     .join("rect")
