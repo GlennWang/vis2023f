@@ -1,0 +1,14 @@
+{
+  "name": "56063714d3df566f",
+  "main": "56063714d3df566f@40.js",
+  "version": "40.0.0",
+  "homepage": "https://observablehq.com/d/56063714d3df566f",
+  "author": {
+    "name": "Glenn Wang's Workspace",
+    "url": "https://observablehq.com/@glenn-wang-ws"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
