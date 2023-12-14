@@ -231,7 +231,7 @@
       <!-- ------------------------------------------------>
       <div class="row hw12">
         <div class="col-md-12 twenty">
-          <a href="https://XxASLxX.github.io/vis2023f/hw08/src/strong/">https://XxASLxX.github.io/vis2023f/hw08/src/strong/</a>
+          <a href="https://GlennWang.github.io/vis2023f/hw08/src/strong/">https://GlennWang.github.io/vis2023f/hw08/src/strong/</a>
           </div>
       </div>
       <!-- ------------------------------------------------>
@@ -239,6 +239,7 @@
         <div class="col-md-12 twenty">
           <h4><u>心得</u></h4>
           <h5>
+            這一次作業的問題，看得應該是我們那天去美術館回來後繳出的zip檔裡面的資料做成的立體圖表，圖表立體的呈現方式可以清楚看出數據間的對應關係。不過缺點在於觀看角度不對就可能對數據誤判，優點則是展現出了資料可視化的可能性與未來。
           </h5>
         </div>
       </div>
@@ -256,7 +257,7 @@
               <th>分項描述</th>
             </tr>
             <tr>
-              <td rowspan="8" id="myTotal"></td>
+              <td rowspan="7" id="myTotal"></td>
               <td>
                 <input
                   type="checkbox"
@@ -287,11 +288,11 @@
                 <input
                   type="checkbox"
                   class="flipswitch"
-                  id="myCheckbox4"
+                  id="myCheckbox3"
                   checked="checked"
                 />
               </td>
-              <td id="m4">2</td>
+              <td id="m3">2</td>
               <td>Medium baseline</td>
               <td>(3)觀察有氧漫遊的資料回答問題</td>
             </tr>
@@ -300,11 +301,11 @@
                 <input
                   type="checkbox"
                   class="flipswitch"
-                  id="myCheckbox5"
+                  id="myCheckbox4"
                   checked="checked"
                 />
               </td>
-              <td id="m5">1</td>
+              <td id="m4">1</td>
               <td></td>
               <td>(4)觀察主題遊的資料集回答問題</td>
             </tr>
@@ -313,11 +314,11 @@
                 <input
                   type="checkbox"
                   class="flipswitch"
-                  id="myCheckbox7"
-                  checked="checked"
+                  id="myCheckbox5"
+
                 />
               </td>
-              <td id="m7">2</td>
+              <td id="m5">2</td>
               <td>Strong baseline</td>
               <td>(5)參考執行檔製作出自己的虛擬可視化圖表</td>
             </tr>
@@ -326,11 +327,11 @@
                 <input
                   type="checkbox"
                   class="flipswitch"
-                  id="myCheckbox5"
-                  checked="checked"
+                  id="myCheckbox6"
+
                 />
               </td>
-              <td id="m5">1</td>
+              <td id="m6">1</td>
               <td></td>
               <td>(6)成功讀取主題遊資料並呈現</td>
             </tr>
@@ -374,8 +375,9 @@
             3. 你從圖表中觀察到什麼? (1pt)
 
           </h5>
-          Answer: 平均完成時間落在 4 至 14 分鐘之間。
-          <h5>
+          
+          <h5 style="color: red;">
+            Answer: 平均完成時間落在 4 至 14 分鐘之間。
           </h5>
         </div>
       </div>
@@ -390,20 +392,20 @@
             1. 經過你的觀察，表中的回覆總數大約落在多少?(1pt)
           </h5>
           <h5 style="color: red;">
-            Answer: 60~80之間
+            Answer: 不知道這個總回復數，究竟是全部的回覆總數，還是某一題的回覆總數。我看每一題都170上下，回覆總數大約落在680。
           </h5>
           <h5>
             2. 經過你的推斷，甚麼原因可能造成其與實際修課人數有落差?(1pt)
           </h5>
           <h5 style="color: red;">
-            Answer: 同學沒來，或者來了卻沒填問卷。
+            Answer: 同學沒來，或者來了卻沒填問卷。或者手機沒電。
           </h5>
           <h4><u>使用執行檔觀看主題遊圖表回答問題(1pt)</u></h4>
           <h5>
             1. 根據資料集收集到的資料，你覺得還可以做成什麼樣的虛擬視覺化圖表?(1pt)
           </h5>
           <h5 style="color: red;">
-            Answer: 散點圖（scatter plot）應該可以...吧。
+            Answer: 3D的直條圖應該也行...吧。
           </h5>
         </div>
       </div>
@@ -412,7 +414,7 @@
         <div class="col-md-12 twenty">
         <h4><u>Strong baseline</u></h4>
           <video id="video1" style="width:100%;max-width:100%;" controls="">
-            <source src="HW08.mp4" type="video/mp4">
+            <!-- <source src="HW08.mp4" type="video/mp4"> -->
           </video>
         </div>
       </div>
@@ -436,7 +438,6 @@
       d3.select("#myCheckbox4").on("change", update);
       d3.select("#myCheckbox5").on("change", update);
       d3.select("#myCheckbox6").on("change", update);
-      d3.select("#myCheckbox7").on("change", update);
 
       update();
 
@@ -465,10 +466,6 @@
 
         if (d3.select("#myCheckbox6").property("checked")) {
           score += parseInt(d3.select("#m6").html());
-        }
-
-        if (d3.select("#myCheckbox7").property("checked")) {
-          score += parseInt(d3.select("#m7").html());
         }
         d3.select("#myTotal").html(score);
       }
